@@ -1,0 +1,21 @@
+<div class="auth-box">
+  <h2>Đăng ký tài khoản</h2>
+  {{#if error}}<p class="error">{{error}}</p>{{/if}}
+  <form action="/register" method="POST">
+    <label>Họ tên</label>
+    <input type="text" name="fullname" value="{{body.fullname}}" required>
+    <label>Tên đăng nhập</label>
+    <input type="text" name="username" value="{{body.username}}" required>
+    <label>Số điện thoại</label>
+    <input type="text" name="phone" value="{{body.phone}}" required>
+    <label>Địa chỉ</label>
+    <input type="text" name="address" value="{{body.address}}" required>
+    <label>Mật khẩu</label>
+    <input type="password" name="password" required>
+    <label>Xác nhận mật khẩu</label>
+    <input type="password" name="confirmPassword" required>
+    <button type="submit" class="btn-add">Đăng ký</button>
+  </form>
+  <p>Đã có tài khoản? <a href="/login">Đăng nhập</a></p>
+  <a href="/" class="back-link">← Về trang chủ</a>
+</div>

@@ -1,0 +1,28 @@
+<div class="admin-header">
+  <h1>Quản lý sản phẩm</h1>
+  <a href="/admin/products/add" class="btn-add">+ Thêm sản phẩm</a>
+</div>
+<div class="table-scroll">
+<table class="admin-table">
+  <thead><tr><th>Ảnh</th><th>Tên</th><th>Danh mục</th><th>Giá</th><th>Kho</th><th>Hành động</th></tr></thead>
+  <tbody>
+  {{#each products}}
+    <tr>
+      <td><img src="{{image}}" class="thumb" onerror="this.onerror=null;this.src='/images/no-image.svg'"></td>
+      <td>{{name}}</td>
+      <td>{{category}}</td>
+      <td>{{formatCurrency price}}</td>
+      <td>{{stock}}</td>
+      <td class="actions">
+        <a href="/admin/products/edit/{{id}}">Sửa</a>
+        <form action="/admin/products/delete/{{id}}" method="POST" onsubmit="return confirm('Xoá sản phẩm này?')">
+          <button type="submit">Xoá</button>
+        </form>
+      </td>
+    </tr>
+  {{else}}
+    <tr><td colspan="6">Chưa có sản phẩm nào.</td></tr>
+  {{/each}}
+  </tbody>
+</table>
+</div>

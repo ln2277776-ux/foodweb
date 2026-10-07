@@ -1,0 +1,48 @@
+<h1>Giỏ hàng của bạn</h1>
+{{#if cart.length}}
+<table class="cart-table">
+  <thead>
+    <tr><th>Sản phẩm</th><th>Giá</th><th>Số lượng</th><th>Tạm tính</th><th></th></tr>
+  </thead>
+  <tbody>
+    {{#each cart}}
+    <tr>
+      <td class="cart-product">
+        <img src="{{image}}" onerror="this.onerror=null;this.src='/images/no-image.svg'">
+        <span>{{name}}</span>
+      </td>
+      <td>{{formatCurrency price}}</td>
+      <td>
+        <form action="/cart/update" method="POST" class="qty-form">
+          <input type="hidden" name="productId" value="{{productId}}">
+          <input type="number" name="qty" value="{{qty}}" min="1" onchange="this.form.submit()">
+        </form>
+      </td>
+      <td>{{multiply price qty}}</td>
+      <td>
+        <form action="/cart/remove/{{productId}}" method="POST">
+          <button type="submit" class="btn-remove">Xoá</button>
+        </form>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<div class="cart-summary">
+  <h3>Tổng cộng: {{formatCurrency total}}</h3>
+  {{#if user}}
+  <form action="/cart/checkout" method="POST" class="checkout-form">
+    <label>Số điện thoại giao hàng</label>
+    <input type="text" name="phone" placeholder="{{user.phone}}">
+    <label>Địa chỉ giao hàng</label>
+    <input type="text" name="address" placeholder="{{user.address}}">
+    <button type="submit" class="btn-checkout">Đặt hàng ngay</button>
+  </form>
+  {{else}}
+  <p>Vui lòng <a href="/login">đăng nhập</a> để đặt hàng.</p>
+  {{/if}}
+</div>
+{{else}}
+<p class="empty">Giỏ hàng của bạn đang trống. <a href="/">Tiếp tục mua sắm</a></p>
+{{/if}}

@@ -1,0 +1,14 @@
+<div class="auth-box">
+  <h2>Đăng nhập</h2>
+  {{#if error}}<p class="error">{{error}}</p>{{/if}}
+  <form action="/login" method="POST">
+    <label>Tên đăng nhập</label>
+    <input type="text" name="username" value="{{username}}" required>
+    <label>Mật khẩu</label>
+    <input type="password" name="password" required>
+    <button type="submit" class="btn-add">Đăng nhập</button>
+  </form>
+  <p>Chưa có tài khoản? <a href="/register">Đăng ký ngay</a></p>
+  <p class="hint">Tài khoản quản trị mẫu: <b>admin</b> / <b>admin123</b></p>
+  <a href="/" class="back-link">← Về trang chủ</a>
+</div>

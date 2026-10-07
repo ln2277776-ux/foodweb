@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "salt": "28788f4b6ae97e5fd8da27021344bf4b",
+    "password": "a87d9adda355b9a1acaefaa535f4f514c189478594fee2d69ff2ddcffcba570b484bca0457f7f8ab04cd06638493d23ae71a079767c3e7212ddbae8d93ec385a",
+    "fullname": "Quan tri vien",
+    "phone": "0900000000",
+    "address": "Ha Noi",
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "username": "tuancho",
+    "salt": "b1343ccf11774095781312547d9055ad",
+    "password": "d024c30a76e214e9906573dc87167e77e1412d33d95226f3985594c1415023d8d055e9a3f926041091a8417944b427418fd898b2587245d65d9634aa389eecd1",
+    "fullname": "tuan",
+    "phone": "0123",
+    "address": "Cầu Giấy, Hà Nội",
+    "role": "user"
+  }
+]

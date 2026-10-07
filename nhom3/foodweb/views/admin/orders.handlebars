@@ -1,0 +1,28 @@
+<h1>Quản lý đơn hàng</h1>
+<div class="table-scroll">
+<table class="admin-table">
+  <thead><tr><th>Mã</th><th>SĐT</th><th>Địa chỉ</th><th>Tổng tiền</th><th>Trạng thái</th></tr></thead>
+  <tbody>
+  {{#each orders}}
+    <tr>
+      <td>#{{id}}</td>
+      <td>{{phone}}</td>
+      <td>{{address}}</td>
+      <td>{{formatCurrency total}}</td>
+      <td>
+        <form action="/admin/orders/{{id}}/status" method="POST" class="status-form">
+          <select name="status" onchange="this.form.submit()">
+            <option value="Chờ xử lý" {{#ifEquals status "Chờ xử lý"}}selected{{/ifEquals}}>Chờ xử lý</option>
+            <option value="Đang giao" {{#ifEquals status "Đang giao"}}selected{{/ifEquals}}>Đang giao</option>
+            <option value="Hoàn thành" {{#ifEquals status "Hoàn thành"}}selected{{/ifEquals}}>Hoàn thành</option>
+            <option value="Đã huỷ" {{#ifEquals status "Đã huỷ"}}selected{{/ifEquals}}>Đã huỷ</option>
+          </select>
+        </form>
+      </td>
+    </tr>
+  {{else}}
+    <tr><td colspan="5">Chưa có đơn hàng nào.</td></tr>
+  {{/each}}
+  </tbody>
+</table>
+</div>

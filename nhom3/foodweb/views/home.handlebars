@@ -1,0 +1,31 @@
+<section class="hero">
+  <h1>Đặt đồ ăn ngon, giao tận nơi</h1>
+  <p>Chọn món yêu thích và đặt hàng chỉ trong vài bước</p>
+</section>
+
+<div class="categories">
+  <a href="/" class="{{#unless activeCategory}}active{{/unless}}">Tất cả</a>
+  {{#each categories}}
+    <a href="/?category={{this}}" class="{{#ifEquals this ../activeCategory}}active{{/ifEquals}}">{{this}}</a>
+  {{/each}}
+</div>
+
+<div class="product-grid">
+  {{#each products}}
+    <div class="product-card">
+      <a href="/product/{{id}}" class="product-link">
+        <img src="{{image}}" alt="{{name}}" onerror="this.onerror=null;this.src='/images/no-image.svg'">
+        <h3>{{name}}</h3>
+      </a>
+      <p class="category-tag">{{category}}</p>
+      <p class="price">{{formatCurrency price}}</p>
+      <form action="/cart/add" method="POST">
+        <input type="hidden" name="productId" value="{{id}}">
+        <input type="hidden" name="qty" value="1">
+        <button type="submit" class="btn-add">Thêm vào giỏ</button>
+      </form>
+    </div>
+  {{else}}
+    <p class="empty">Không tìm thấy sản phẩm nào.</p>
+  {{/each}}
+</div>

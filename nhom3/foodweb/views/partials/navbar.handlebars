@@ -1,0 +1,22 @@
+<header class="navbar">
+  <div class="navbar-inner container">
+    <a href="/" class="logo">🍔 FoodWeb</a>
+
+    <form action="/" method="GET" class="search-form">
+      <input type="text" name="q" placeholder="Tìm món ăn..." value="{{q}}">
+      <button type="submit">Tìm</button>
+    </form>
+
+    <nav class="nav-links">
+      <a href="/cart" class="cart-link">🛒 Giỏ hàng{{#if cartCount}} <span class="badge">{{cartCount}}</span>{{/if}}</a>
+      {{#if user}}
+        {{#ifEquals user.role "admin"}}<a href="/admin">Quản trị</a>{{/ifEquals}}
+        <span class="hello">Xin chào, {{user.fullname}}</span>
+        <a href="/logout">Đăng xuất</a>
+      {{else}}
+        <a href="/login">Đăng nhập</a>
+        <a href="/register">Đăng ký</a>
+      {{/if}}
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "createdAt": "2026-09-14T06:11:10.178Z",
+    "status": "Chờ xử lý",
+    "userId": 1,
+    "items": [
+      {
+        "productId": 2,
+        "name": "Pizza Bò Phô Mai",
+        "price": 145000,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN_osIt4W9Xjn1UZNm7mxu2mGtST75p5p2W6c5OQlAww&s=10",
+        "qty": 1
+      }
+    ],
+    "total": 145000,
+    "phone": "0900000000",
+    "address": "Ha Noi"
+  },
+  {
+    "id": 2,
+    "createdAt": "2026-09-14T06:12:19.804Z",
+    "status": "Chờ xử lý",
+    "userId": 2,
+    "items": [
+      {
+        "productId": 2,
+        "name": "Pizza Bò Phô Mai",
+        "price": 145000,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN_osIt4W9Xjn1UZNm7mxu2mGtST75p5p2W6c5OQlAww&s=10",
+        "qty": 1
+      }
+    ],
+    "total": 145000,
+    "phone": "0123",
+    "address": "Cầu Giấy, Hà Nội"
+  },
+  {
+    "id": 3,
+    "createdAt": "2026-09-29T02:22:08.391Z",
+    "status": "Chờ xử lý",
+    "userId": 1,
+    "items": [
+      {
+        "productId": 2,
+        "name": "Pizza Bò Phô Mai",
+        "price": 145000,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN_osIt4W9Xjn1UZNm7mxu2mGtST75p5p2W6c5OQlAww&s=10",
+        "qty": 1
+      }
+    ],
+    "total": 145000,
+    "phone": "0900000000",
+    "address": "Ha Noi"
+  },
+  {
+    "id": 4,
+    "createdAt": "2026-09-29T02:26:41.259Z",
+    "status": "Chờ xử lý",
+    "userId": 1,
+    "items": [
+      {
+        "productId": 2,
+        "name": "Pizza Bò Phô Mai",
+        "price": 145000,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN_osIt4W9Xjn1UZNm7mxu2mGtST75p5p2W6c5OQlAww&s=10",
+        "qty": 1
+      }
+    ],
+    "total": 145000,
+    "phone": "0900000000",
+    "address": "Ha Noi"
+  }
+]
